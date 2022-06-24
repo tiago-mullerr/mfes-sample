@@ -1,0 +1,16 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    height: 8vmin;
+    background-color: #2f558d;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    line-height: 1vmin;
+}
+
+.nav-bar a,h3{
+    width: 15%;
+    color: white;
+    text-decoration: none;
+}
