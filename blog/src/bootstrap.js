@@ -22,7 +22,7 @@ const mount = (el) => {
 }
 
 if (process.env.NODE_ENV === 'development') {
-    const devRoot = document.querySelector('#blog')
+    const devRoot = document.querySelector('#users')
     if (devRoot) {
         mount(devRoot)
     }

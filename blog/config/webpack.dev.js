@@ -17,10 +17,10 @@ const devConfig = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'blog',
+            name: 'users',
             filename: 'remoteEntry.js',
             exposes: {
-                './Blog': './src/bootstrap'
+                './Users': './src/bootstrap'
             },
             shared: packageJson.dependencies
         }),
