@@ -1,4 +1,4 @@
-.nav-bar {
+.nav-bar-links {
     display: flex;
     flex-direction: row;
     height: 8vmin;
@@ -7,10 +7,18 @@
     text-align: center;
     color: white;
     line-height: 1vmin;
+    font-size: 1.17em;
 }
 
-.nav-bar a,h3{
+.nav-bar-links a, h3 {
     width: 15%;
     color: white;
     text-decoration: none;
+    align-self: center;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

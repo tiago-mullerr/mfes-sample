@@ -1,0 +1,34 @@
+.App {
+  text-align: center;
+  background-color: #f3f3f3;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.table-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  max-width: 100%;
+}
+
+.table-container div {
+  width: 100%;
+}
+
+.table-container td {
+  text-align: center !important;
+}
+
+.small-text {
+  font-size: 8px !important;
+  text-align: center;
+}

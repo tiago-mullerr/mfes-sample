@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const commonConfig = require('./webpack.common')
 const ModuleFederationPlugin = require('webpack/lib/container/ModuleFederationPlugin')
 const packageJson = require('../package.json')
@@ -6,25 +7,28 @@ const packageJson = require('../package.json')
 const devConfig = {
     mode: 'development',
     output: {
-        publicPath: 'http://localhost:3000/'
+        publicPath: 'http://localhost:3002/',
     },
     devServer: {
-        port: 3000,
+        port: 3002,
         historyApiFallback: {
             index: '/index.html'
         }
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'container',
+            name: 'blog',
             filename: 'remoteEntry.js',
-            remotes: {
-                about: 'about@http://localhost:3001/remoteEntry.js',
-                blog: 'blog@http://localhost:3002/remoteEntry.js'
+            exposes: {
+                './Blog': './src/bootstrap'
             },
             shared: packageJson.dependencies
+        }),
+        new HtmlWebpackPlugin({
+            template: './public/index.html'
         })
     ]
-}
+};
+
 
 module.exports = merge(commonConfig, devConfig)

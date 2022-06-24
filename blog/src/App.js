@@ -1,23 +1,37 @@
+import React from 'react';
 import logo from './logo.svg';
-import './App.css';
+import classes from './App.module.css';
+import DataTable from './components/DataTable/DataTable';
+import { useState, useEffect } from 'react';
 
-function App() {
+const tableColumns = [
+  'id',
+  'email',
+  'first_name',
+  'last_name',
+];
+
+function App({ data }) {
+
+  const [restRows, setRestRows] = useState([]);
+
+  const getServerSideProps = async () => {
+    const res = await fetch(`https://reqres.in/api/users`)
+    const data = await res.json()
+    return { props: { data } }
+  }
+
+  useEffect((e) => {
+    getServerSideProps().then((data) => {
+      setRestRows(data.props.data.data);
+    })
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes["App"]}>
+      <div className={classes["table-container"]}>
+        <DataTable cellClasses={classes["small-text"]} columns={tableColumns} rows={restRows}></DataTable>
+      </div>
     </div>
   );
 }

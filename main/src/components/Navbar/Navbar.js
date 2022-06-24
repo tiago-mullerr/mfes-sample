@@ -4,11 +4,14 @@ import classes from './Navbar.module.css';
 
 const Navbar = () => {
     return (
-        <div className={classes["nav-bar"]}>
-            <Link to='/'><h3>Home</h3></Link>
-            <Link to='/about'><h3>About</h3></Link>
-            <h3>Description</h3>
-        </div>
+        // <div className={classes["nav-bar"]}>
+            <div className={classes["nav-bar-links"]}>
+                <Link to='/'><span>Home</span></Link>
+                <Link to='/about'><span>About</span></Link>
+                <Link to='/blog'><span>Blog</span></Link>
+                <Link to='/'><span>Description</span></Link>
+            </div>
+        // </div>
     );
 }
 
