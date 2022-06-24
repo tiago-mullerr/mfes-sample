@@ -1,0 +1,29 @@
+.card {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background-color: #fff;
+    max-width: 60vw;
+    min-height: 20vh;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    margin: 10px;
+}
+
+.card span {
+    width: 100%;
+    margin: 10px 30px 10px 30px;
+}
+
+.card span:first-child {
+    color: #5b83c1;
+    font-size: 1.3rem;
+}
+
+.card span:last-child{
+    color: #202020;
+    text-align: left;
+}
