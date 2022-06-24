@@ -28,7 +28,12 @@
   text-align: center !important;
 }
 
+.table-container table {
+  min-width: 90vw;
+  min-height: 55vh;
+}
+
 .small-text {
-  font-size: 8px !important;
+  font-size: 15px !important;
   text-align: center;
 }
