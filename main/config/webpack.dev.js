@@ -20,7 +20,7 @@ const devConfig = {
             filename: 'remoteEntry.js',
             remotes: {
                 about: 'about@http://localhost:3001/remoteEntry.js',
-                blog: 'blog@http://localhost:3002/remoteEntry.js',
+                users: 'users@http://localhost:3002/remoteEntry.js',
                 description: 'description@http://localhost:4200/remoteEntry.js'
             }
         })

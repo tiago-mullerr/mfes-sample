@@ -1,8 +1,8 @@
-import { mount } from 'blog/Blog';
+import { mount } from 'users/Users';
 import React, { useRef, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 
-const Blog = () => {
+const Users = () => {
     const ref = useRef(null);
     const history = useHistory();
 
@@ -14,4 +14,4 @@ const Blog = () => {
     return <div ref={ref} />
 }
 
-export default Blog;
+export default Users;
