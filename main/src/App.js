@@ -6,16 +6,21 @@ import About from './components/About/About';
 import Users from './components/Users/Users';
 import Description from './components/Description/Description';
 import './App.css';
+import Home from './components/Home/Home';
+import { createBrowserHistory } from 'history'
 
-function App({ history }) {
+const history = createBrowserHistory();
+
+function App() {
   return (
     <div>
       <Router history={history}>
         <Navbar></Navbar>
         <Switch>
-          <Route path='/about' component={About}></Route>
-          <Route path='/users' component={Users}></Route>
-          <Route path='/description' component={Description}></Route>
+          <Route exact path='/' component={Home}></Route>
+          <Route exact path='/about' component={About}></Route>
+          <Route exact path='/users' component={Users}></Route>
+          <Route exact path='/description' component={Description}></Route>
         </Switch>
       </Router>
     </div>
@@ -23,3 +28,4 @@ function App({ history }) {
 }
 
 export default App;
+

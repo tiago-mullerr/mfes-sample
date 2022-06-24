@@ -8,11 +8,6 @@
   justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
 .table-container {
   display: flex;
   flex-direction: row;
